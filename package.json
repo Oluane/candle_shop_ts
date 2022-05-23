@@ -1,5 +1,5 @@
 {
-	"name": "candle_shop",
+	"name": "candle_shop_ts",
 	"version": "0.1.0",
 	"description": "",
 	"main": "index.js",
@@ -11,16 +11,16 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Oluane/candle_shop.git"
+		"url": "git+https://github.com/Oluane/candle_shop_ts.git"
 	},
 	"author": "Oluane",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/Oluane/candle_shop/issues"
+		"url": "https://github.com/Oluane/candle_shop_ts/issues"
 	},
-	"homepage": "https://github.com/Oluane/candle_shop#readme",
+	"homepage": "https://github.com/Oluane/candle_shop_ts#readme",
 	"dependencies": {
-		"concurrently": "^5.2.0",
-		"date-fns": "^2.15.0"
+		"concurrently": "5.2.0",
+		"date-fns": "2.15.0"
 	}
 }
