@@ -10,7 +10,7 @@ import NavbarMobile from "./NavbarMobile/NavbarMobile";
 
 const NavbarDisplayer = () => {
   const { deviceWidth } = useContext(viewportContext);
-  const isLoggedUser = useSelector((state) => state.user.isLoggedIn);
+  const isLoggedUser = useSelector((state: any) => state.user.isLoggedIn);
 
   return (
     <nav className="mainNavbar">

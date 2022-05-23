@@ -7,7 +7,11 @@ import IconSvg from "../../IconSvg/IconSvg";
 import ShoppingCart from "../../ShoppingCart/ShoppingCart";
 import { viewportContext } from "../../ViewportProvider/ViewportProvider";
 
-const NavbarMobile = ({ isLoggedUser }) => {
+type NavbarMobileProps = {
+  isLoggedUser: boolean;
+};
+
+const NavbarMobile = ({ isLoggedUser }: NavbarMobileProps) => {
   const [toggleSideMenuDisplay, setToggleSideMenuDisplay] = useState(false);
   const { deviceHeight } = useContext(viewportContext);
 

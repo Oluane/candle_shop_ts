@@ -1,6 +1,6 @@
-import apiInstance from "../../services/api/api";
+import apiInstance from "./api";
 
-//TODO handling errors
+//TODO: handling errors
 
 export const fetchCandleIdFromTypeSizeScent = (typeSize, scent) => {
   const { price, sizeEnName, typeEnName, typeId } = typeSize;
@@ -30,7 +30,7 @@ export const fetchCandleIdFromTypeSizeScent = (typeSize, scent) => {
     });
 };
 
-export const fetchCandleInfosFromId = (candleId) => {
+export const fetchCandleInfosFromId = (candleId: number) => {
   return apiInstance(`/candles/${candleId}`)
     .then(({ data }) => {
       return { status: "success", data: { ...data[0] } };

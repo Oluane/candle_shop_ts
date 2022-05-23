@@ -1,7 +1,7 @@
 import apiInstance from "../api/api";
 
 //fetching func that can check stock for multiple candles
-export const fetchStockData = (productArr) => {
+export const fetchStockData = (productArr: Record<string, any>[]) => {
   return Promise.all(
     productArr.map((product) => {
       return apiInstance
@@ -12,7 +12,13 @@ export const fetchStockData = (productArr) => {
   );
 };
 
-export const checkingProductsAvailability = (productArr, dispatch, action) => {
+// TODO: better type
+
+export const checkingProductsAvailability = (
+  productArr: Record<string, any>[],
+  dispatch: any,
+  action: Record<string, any>,
+) => {
   fetchStockData(productArr)
     .then((res) => {
       dispatch({ ...action, payload: res });

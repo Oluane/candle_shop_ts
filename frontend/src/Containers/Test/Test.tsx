@@ -3,18 +3,18 @@ import "./Test.scss";
 import React from "react";
 
 import IconSvg from "../../Components/IconSvg/IconSvg";
-import iconsInfos from "../../style/icons/iconsLib";
+import { iconInfos } from "../../style/icons/iconsLib";
 
 const Test = () => {
   return (
     <div className="testWrapper">
       <div className="iconDisplayWrapper">
         <h4>Icons:</h4>
-        {Object.keys(iconsInfos).map((icon) => {
+        {Object.keys(iconInfos).map((icon) => {
           return (
             <div className="iconBlock">
               <div className="icons">
-                <IconSvg iconName={icon} />
+                <IconSvg iconName={icon as keyof typeof iconInfos} />
               </div>
               <p>{icon}</p>
             </div>

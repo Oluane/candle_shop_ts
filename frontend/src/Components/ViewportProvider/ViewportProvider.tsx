@@ -1,8 +1,8 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, ReactNode, useEffect, useState } from "react";
 
-export const viewportContext = createContext({});
+export const viewportContext = createContext({ deviceWidth: 0, deviceHeight: 0 });
 
-export const ViewportProvider = ({ children }) => {
+export const ViewportProvider = ({ children }: { children: ReactNode }) => {
   const [deviceWidth, setDeviceWidth] = useState(window.innerWidth);
   const [deviceHeight, setDeviceHeight] = useState(window.innerHeight);
 

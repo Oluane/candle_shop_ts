@@ -1,10 +1,15 @@
 import React from "react";
 
-import iconInfos from "../../style/icons/iconsLib";
+import { iconInfos } from "../../style/icons/iconsLib";
 
 //const defaultStyles = { display: "inline-block", verticalAlign: "middle" };
 
-const IconSvg = ({ iconName, className }) => {
+type IconSvgProps = {
+  iconName: keyof typeof iconInfos;
+  className?: string;
+};
+
+const IconSvg = ({ iconName, className }: IconSvgProps) => {
   const pathArr = iconInfos[iconName].path;
 
   return (

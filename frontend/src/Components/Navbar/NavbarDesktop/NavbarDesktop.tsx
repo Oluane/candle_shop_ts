@@ -6,7 +6,11 @@ import { Link } from "react-router-dom";
 import IconSvg from "../../IconSvg/IconSvg";
 import ShoppingCart from "../../ShoppingCart/ShoppingCart";
 
-const NavbarDesktop = ({ isLoggedUser }) => {
+type NavbarDesktopProps = {
+  isLoggedUser: boolean;
+};
+
+const NavbarDesktop = ({ isLoggedUser }: NavbarDesktopProps) => {
   return (
     <>
       <div className="navLeft smallText">

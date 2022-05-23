@@ -1,7 +1,7 @@
-export const convertCamelToSnake = (str) => {
+export const convertCamelToSnake = (string: string) => {
   const regex = /[\w][A-Z]/g;
-  if (str) {
-    return str
+  if (string) {
+    return string
       .replace(regex, ($1) => {
         return $1[0] + "_" + $1[1];
       })
@@ -9,10 +9,10 @@ export const convertCamelToSnake = (str) => {
   }
 };
 
-export const convertSnakeToCamel = (str) => {
+export const convertSnakeToCamel = (string: string) => {
   const regex = /[_][a-z0-9]/g;
-  if (str) {
-    return str.replace(regex, (match) => {
+  if (string) {
+    return string.replace(regex, (match) => {
       return match[1].toUpperCase();
     });
   }

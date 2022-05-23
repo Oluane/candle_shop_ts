@@ -4,7 +4,6 @@ import React, { useContext, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { viewportContext } from "../../Components/ViewportProvider/ViewportProvider";
 import cartActions from "../../redux/actions/cartActions";
 import wishlistActions from "../../redux/actions/wishlistActions";
 import apiInstance from "../../services/api/api";
@@ -14,6 +13,7 @@ import DropdownMobile from "../DropdownMobile/DropdownMobile";
 import IconSvg from "../IconSvg/IconSvg";
 import NoContent from "../NoContent/NoContent";
 import { ToastContext } from "../Toasts/ToastProvider";
+import { viewportContext } from "../ViewportProvider/ViewportProvider";
 
 const itemsToDisplayOnInit = 6;
 
