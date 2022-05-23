@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  mysql:
+    image: arm64v8/mysql:oracle
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: candle-shop-db
+    # restart: always
+    ports: 
+      - "3306:3306"
+    expose: 
+      - "3306"
+    environment:
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "mysql"
+      MYSQL_ROOT_PASSWORD: "azerty"
+      MYSQL_DATABASE: candles_shop
