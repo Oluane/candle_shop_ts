@@ -1,26 +1,28 @@
 {
-	"name": "candle_shop_ts",
-	"version": "0.1.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"client": "cd frontend && npm run start",
-		"server": "cd backend && nodemon server.js",
-		"dev": "concurrently --kill-others \"npm run client\" \"npm run server\""
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Oluane/candle_shop_ts.git"
-	},
-	"author": "Oluane",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/Oluane/candle_shop_ts/issues"
-	},
-	"homepage": "https://github.com/Oluane/candle_shop_ts#readme",
-	"dependencies": {
-		"concurrently": "5.2.0",
-		"date-fns": "2.15.0"
-	}
+  "name": "candle_shop_ts",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd frontend && npm run start",
+    "server": "cd backend && nodemon server.js",
+    "dev": "concurrently --kill-others \"npm run client\" \"npm run server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oluane/candle_shop_ts.git"
+  },
+  "author": "Oluane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oluane/candle_shop_ts/issues"
+  },
+  "homepage": "https://github.com/Oluane/candle_shop_ts#readme",
+  "dependencies": {
+    "concurrently": "7.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.16"
+  }
 }
