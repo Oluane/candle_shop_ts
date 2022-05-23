@@ -1,0 +1,77 @@
+@import "../../style/generalVariables.scss";
+
+.engagementSection {
+	display: flex;
+	padding: 0 15px;
+	justify-content: space-between;
+	background-color: $secondaryTrans;
+	border-top: solid 1px $lightGreyTrans;
+
+	.engagementSectionItem {
+		width: 25%;
+		padding: 35px 40px;
+		position: relative;
+
+		&:not(:last-child) {
+			&:after {
+				content: "";
+				display: inline-block;
+				width: 1px;
+				height: 50px;
+				background-color: $lightGreyTrans;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	.engagementIcon {
+		width: 40px;
+		height: 40px;
+		margin: 20px auto;
+		color: $tertiary;
+	}
+
+	.engagementText {
+		line-height: 18px;
+		padding: 0 20px;
+	}
+}
+
+@media screen and (max-width: 688px) {
+	.engagementSection {
+		flex-direction: column;
+		padding: 10px 15px;
+
+		.engagementSectionItem {
+			width: 100%;
+			padding: 15px 10px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			p:first-child {
+				width: 100%;
+				margin-bottom: 16px;
+			}
+
+			&:not(:last-child) {
+				&:after {
+					display: none;
+				}
+			}
+
+			p:last-child {
+				width: 85%;
+				padding: 0 12px;
+			}
+		}
+
+		.engagementIcon {
+			width: 30px;
+			height: 30px;
+			margin: 10px auto;
+		}
+	}
+}

@@ -1,0 +1,68 @@
+@import "../../style/generalVariables.scss";
+
+.addressFormContainer {
+	margin: auto;
+
+	button {
+		width: 100%;
+		padding: 15px;
+		background-color: $lightDark;
+		border: solid 1px $lightDark;
+		color: $primary;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $roseGold;
+			border-color: $roseGold;
+		}
+	}
+
+	.inputLabel.checkboxInput {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		.customCheckbox {
+			width: 14px;
+			height: 14px;
+			position: relative;
+			bottom: -1px;
+			border: solid 1px $lightDark;
+			background-color: transparent;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -1px;
+				left: -1px;
+				background-color: $roseGold;
+				width: 14px;
+				height: 14px;
+				opacity: 0;
+			}
+
+			&:checked::after {
+				opacity: 1;
+
+				.checkIcon {
+					width: 12px;
+					height: 12px;
+				}
+			}
+		}
+
+		.checkboxText {
+			line-height: 15px;
+			margin-left: 10px;
+		}
+
+		.checkIcon {
+			width: 12px;
+			height: 12px;
+			color: $primary;
+			position: absolute;
+			left: 5px;
+			top: 3px;
+			pointer-events: none;
+		}
+	}
+}

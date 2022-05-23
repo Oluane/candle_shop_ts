@@ -1,0 +1,51 @@
+@import "../../../style/generalVariables.scss";
+.brandLogo.mobile {
+	height: 38px;
+	top: 12px;
+}
+
+.burgerIconWrapper {
+	width: 30px;
+	height: 30px;
+	color: $lightDark;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.sideMenu {
+	background-color: $primary;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 65px;
+	left: 0;
+	overflow: hidden;
+	opacity: 0;
+	transform: translateX(-100%);
+
+	box-shadow: 0px 7px 10px -7px $tertiaryTrans inset;
+
+	transition: opacity 0.2s ease, transform 0.4s ease-out;
+
+	&.active {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.listMenu {
+	margin-top: 45px;
+	.listRow {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 25px;
+		background-color: $secondaryTrans;
+		margin-bottom: 1px;
+		.navArrow {
+			color: $lightDark;
+			width: 20px;
+			height: 20px;
+		}
+	}
+}

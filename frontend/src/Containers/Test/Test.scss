@@ -1,0 +1,59 @@
+.testWrapper {
+	height: 100vh;
+
+	.iconDisplayWrapper {
+		margin-top: 100px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 25px;
+
+		h4 {
+			width: 100%;
+		}
+
+		.iconBlock {
+			margin-bottom: 30px;
+			min-width: 150px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			.icons {
+				width: 25px;
+				height: 25px;
+
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.colorsWrapper {
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		h4 {
+			width: 100%;
+			margin-bottom: 15px;
+		}
+
+		.previewNameWrapper {
+			background-color: white;
+			margin-bottom: 15px;
+			margin-right: 10px;
+			text-align: center;
+			padding: 10px;
+		}
+		.testColor {
+			width: 150px;
+			height: 100px;
+			margin: auto;
+		}
+
+		p {
+			line-height: 28px;
+		}
+	}
+}

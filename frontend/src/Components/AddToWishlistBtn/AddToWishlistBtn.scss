@@ -1,0 +1,24 @@
+@import "../../style/generalVariables.scss";
+
+.addToWishlist {
+	padding: 10px;
+	background-color: $secondary;
+	border: solid 1px $lightGreyTrans;
+	margin: auto;
+	transition: all 0.3s ease;
+	cursor: pointer;
+
+	&:hover {
+		.addToWishlistIcon {
+			color: $roseGold;
+		}
+	}
+	.addToWishlistIcon {
+		width: 25px;
+		height: 25px;
+		color: $lightDark;
+		&.disabled {
+			color: $roseGold;
+		}
+	}
+}

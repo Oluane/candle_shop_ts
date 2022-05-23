@@ -1,0 +1,86 @@
+@import "../../style/generalVariables.scss";
+
+.candleInfoDisplayerWrapper {
+	margin-top: 35px;
+	.candleInfoNav {
+		display: flex;
+		justify-content: stretch;
+		margin-bottom: 20px;
+
+		.navItem {
+			text-transform: uppercase;
+			font-size: 12px;
+			cursor: pointer;
+			position: relative;
+			width: 33%;
+			&:not(:last-child) {
+				&:after {
+					content: "";
+					display: inline-block;
+					width: 1px;
+					height: 12px;
+					background-color: $lightGreyTrans;
+					position: absolute;
+					left: 70%;
+					bottom: 0;
+				}
+			}
+			&.active {
+				color: $roseGold;
+			}
+		}
+	}
+
+	.candleInfoContent {
+		width: 100%;
+		min-height: 194px;
+
+		.textDesc {
+			letter-spacing: 0.05em;
+			line-height: 22px;
+		}
+
+		.technicalTab {
+			.rows {
+				display: flex;
+				background-color: $tertiaryTrans;
+				&:not(:last-child) {
+					margin-bottom: 1px;
+				}
+			}
+
+			.columns {
+				width: 50%;
+				padding: 12px;
+				&:nth-child(odd) {
+					text-transform: uppercase;
+					font-size: 13px;
+				}
+				&:nth-child(even) {
+					background-color: #c9b8a7;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 688px) {
+	.candleInfoDisplayerWrapper {
+		.candleInfoNav {
+			display: flex;
+			justify-content: stretch;
+			margin-bottom: 20px;
+
+			.navItem {
+				font-size: 10px;
+				width: 33%;
+				&:not(:last-child) {
+					&:after {
+						height: 10px;
+						left: 85%;
+					}
+				}
+			}
+		}
+	}
+}

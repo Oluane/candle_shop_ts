@@ -1,0 +1,29 @@
+@import "../../style/generalVariables.scss";
+
+.addToCartTextBtn {
+	width: 78%;
+	padding: 15px;
+	background-color: $lightDark;
+	border: solid 1px $lightDark;
+	color: $primary;
+	transition: all 0.3s ease;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $roseGold;
+		border-color: $roseGold;
+	}
+}
+
+.addToCartIconBtn {
+	width: 26px;
+	height: 26px;
+	color: $tertiary;
+	position: absolute;
+	right: 25px;
+	cursor: pointer;
+
+	&:hover {
+		color: $roseGold;
+	}
+}

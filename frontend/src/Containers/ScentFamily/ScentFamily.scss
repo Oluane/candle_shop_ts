@@ -1,0 +1,306 @@
+@import "../../style/generalVariables.scss";
+
+.scentFamilyContainer {
+	margin: auto;
+	position: relative;
+
+	.familyHeader {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-bottom: 50px;
+
+		.imageWrapper {
+			width: 100%;
+			height: 330px;
+			filter: saturate(60%);
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: 50% 70%;
+			}
+		}
+
+		.familyTitle {
+			margin-top: 30px;
+			padding: 45px 0 25px 0;
+			position: relative;
+
+			.titleSpan {
+				top: 22%;
+				left: 50%;
+				text-transform: capitalize;
+			}
+		}
+
+		.familyDesc {
+			width: 85%;
+			margin: auto;
+			line-height: 26px;
+			letter-spacing: 0.1em;
+		}
+	}
+
+	.scrollContainer::-webkit-scrollbar {
+		display: none;
+	}
+
+	.scentWrapper {
+		margin: auto;
+		padding: 20px;
+		h4 {
+			margin-bottom: 20px;
+			line-height: 24px;
+		}
+	}
+
+	.scrollWrapper {
+		position: relative;
+	}
+
+	#scrollContainer {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		position: relative;
+		//margin-top: 50px;
+		max-height: 120px;
+		scrollbar-width: none;
+
+		.scentItem {
+			min-width: 300px;
+			height: 99px;
+			background-color: $tertiary;
+			position: relative;
+			border-radius: 3px;
+			cursor: pointer;
+
+			h4 {
+				position: absolute;
+				top: 0;
+				color: $primary;
+				line-height: 99px;
+				width: 100%;
+				text-align: center;
+				border-radius: 2px;
+			}
+			.scentThumbnail {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: 50% 45%;
+				mask-image: linear-gradient($lightGrey, 0%, $lightGrey 100%);
+				vertical-align: middle;
+				filter: blur(0.5px);
+				transition: all 0.2s ease 0s;
+				border-radius: 3px;
+			}
+
+			&.active {
+				h4 {
+					font-weight: 600;
+					text-shadow: 1px 1px 2px $lightGrey;
+				}
+				.scentThumbnail {
+					mask-image: none;
+					filter: none;
+				}
+			}
+		}
+
+		.separation {
+			width: 1px;
+			height: 50px;
+			background-color: $lightGrey;
+			margin: 0 20px;
+			flex-shrink: 0;
+		}
+	}
+
+	.rightArrowContainer,
+	.leftArrowContainer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		z-index: 10;
+		width: 30px;
+		height: 100%;
+		color: $lightGrey;
+		cursor: pointer;
+	}
+
+	.rightArrowContainer:hover,
+	.leftArrowContainer:hover {
+		background-color: rgba(35, 35, 35, 0.2);
+		color: $primary;
+	}
+
+	.rightArrowContainer {
+		right: 0;
+	}
+
+	.leftArrowContainer {
+		left: 0;
+	}
+
+	.directionArrow {
+		width: 30px;
+		height: 100%;
+	}
+
+	.scentInfoWrapper {
+		display: flex;
+		margin: 35px 0;
+		align-items: center;
+
+		.scentDesc,
+		.scentComplementary {
+			width: 50%;
+			p {
+				line-height: 24px;
+				letter-spacing: 0.1em;
+			}
+		}
+
+		.scentComplementary {
+			padding: 0px 10px 0 55px;
+
+			.complementaryList {
+				display: flex;
+				justify-content: flex-start;
+				padding: 5px 5px 5px 0;
+				margin-top: 15px;
+				li {
+					margin-left: 21px;
+					&:not(:first-child) {
+						margin-left: 46px;
+					}
+
+					position: relative;
+					letter-spacing: 0.1em;
+
+					&:before {
+						content: "• ";
+						color: $tertiary;
+						display: inline-block;
+						width: 20px;
+						height: 20px;
+						font-size: 20px;
+						font-family: "Times New Roman", Times, serif;
+						text-align: center;
+						padding-top: 2px;
+						position: absolute;
+						left: -26px;
+						bottom: -2px;
+					}
+				}
+			}
+
+			h4 {
+				letter-spacing: 0.1em;
+				font-size: 16px;
+			}
+
+			.candleTypesWrapper {
+				margin-top: 15px;
+			}
+
+			.candleTypesContainer {
+				display: flex;
+				justify-content: space-evenly;
+
+				.typeCard {
+					display: flex;
+					width: 28%;
+					align-items: center;
+					padding: 10px;
+					background-color: $primary;
+					border-radius: 3px;
+
+					&:hover {
+						background-color: $roseGold;
+
+						.typeIcon {
+							color: $secondary;
+						}
+
+						p {
+							color: $primary;
+						}
+					}
+				}
+
+				.typeIcon {
+					width: 40px;
+					height: 40px;
+					color: $tertiary;
+				}
+
+				p {
+					font-family: "Homemade Apple", cursive;
+					color: $roseGold;
+					line-height: 20px;
+					letter-spacing: unset;
+					width: 70%;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 688px) {
+	.scentFamilyContainer {
+		#scrollContainer {
+			.scentItem {
+				min-width: 150px;
+				height: 60px;
+
+				h4 {
+					line-height: 60px;
+				}
+			}
+		}
+		.scentInfoWrapper {
+			flex-direction: column;
+
+			.scentDesc,
+			.scentComplementary {
+				width: 100%;
+			}
+
+			.scentComplementary {
+				padding: 0 10px;
+
+				.complementaryList {
+					flex-direction: column;
+					justify-content: space-around;
+					padding: 5px;
+
+					li {
+						&:not(:first-child) {
+							margin-left: 21px;
+						}
+						&:before {
+							bottom: unset;
+						}
+					}
+				}
+
+				.candleTypesContainer {
+					flex-direction: column;
+
+					.typeCard {
+						width: 100%;
+						margin-bottom: 3px;
+					}
+				}
+			}
+		}
+	}
+}

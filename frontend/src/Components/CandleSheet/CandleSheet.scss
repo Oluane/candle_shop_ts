@@ -1,0 +1,214 @@
+@import "../../style/generalVariables.scss";
+
+.candleSheetWrapper {
+	background-color: $secondary;
+	padding: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 680px;
+
+	.dropdownOverlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		visibility: hidden;
+
+		&.visible {
+			visibility: visible;
+		}
+	}
+
+	.separatorBefore {
+		margin-left: 30px;
+		position: relative;
+
+		&:before {
+			content: "";
+			width: 1px;
+			height: 60%;
+			background-color: $lightGreyTrans;
+			position: absolute;
+			left: -15px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	.sliderWrapper {
+		max-width: 425px;
+	}
+
+	.placeholder {
+		width: 42%;
+	}
+
+	.candleSheetInfoWrapper {
+		width: 42%;
+		margin-left: 150px;
+		.candleTitle {
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			margin-bottom: 5px;
+		}
+		.candleInfoContainer {
+			display: flex;
+			color: $lightGrey;
+			margin-bottom: 25px;
+		}
+
+		.actionsBtnWrapper {
+			padding: 10px 0;
+			margin-top: 30px;
+			display: flex;
+			justify-content: flex-start;
+		}
+	}
+
+	.candleVariantsWrapper {
+		// width: 100%;
+		border-top: solid 1px $lightGreyTrans;
+		.variantsOptions {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			padding-left: 35px;
+			height: 60px;
+			border-bottom: solid 1px $lightGreyTrans;
+		}
+
+		.stepIndex {
+			background-color: $tertiary;
+			color: $secondary;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.variantsValues {
+			display: flex;
+			align-items: center;
+			height: 100%;
+			.typeIcon {
+				color: $tertiaryTrans;
+				width: 32px;
+				height: 32px;
+				margin-right: 18px;
+				position: relative;
+				cursor: pointer;
+
+				&.active {
+					color: $roseGold;
+				}
+			}
+
+			.sizeValue {
+				margin-right: 18px;
+				padding-top: 7px;
+				width: 32px;
+				height: 32px;
+				position: relative;
+				cursor: pointer;
+
+				&.active {
+					color: $roseGold;
+				}
+			}
+		}
+
+		.selectorCustom {
+			margin-right: 18px;
+			width: 150px;
+			height: 40px;
+			background-color: $primary;
+			border-radius: 6px;
+			position: relative;
+			cursor: pointer;
+
+			.selectorCustomValue {
+				display: block;
+				width: 124px;
+				line-height: 40px;
+				font-size: 14px;
+				padding-left: 10px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+
+		.selectorArrow {
+			width: 16px;
+			height: 16px;
+			transform: rotate(90deg);
+			position: absolute;
+			right: 5px;
+			top: 11px;
+			color: $tertiary;
+		}
+
+		.selectorDropdown {
+			width: 220px;
+			background-color: $primary;
+			border-radius: 5px;
+			position: absolute;
+			top: 10px;
+			right: 18px;
+			z-index: 1;
+			box-shadow: 0px 0px 5px $lightGreyTrans;
+			cursor: pointer;
+			visibility: hidden;
+			opacity: 0;
+			transition: all 0.2s linear;
+
+			&.visible {
+				visibility: visible;
+				opacity: 1;
+			}
+
+			.dropdownScrollContainer {
+				overflow-y: scroll;
+				max-height: 309px;
+				margin: 15px 0;
+				scrollbar-width: thin;
+				&::-webkit-scrollbar {
+					width: 6px;
+				}
+			}
+
+			.selectorValues {
+				padding: 14px 8px;
+				margin: 0 12px;
+				position: relative;
+
+				&:hover {
+					color: $primary;
+					background-color: $roseGoldTrans;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 688px) {
+	.candleSheetWrapper {
+		padding: 25px;
+		flex-direction: column;
+		.sliderWrapper {
+			width: 100%;
+			margin: auto;
+		}
+		.candleSheetInfoWrapper {
+			width: 100%;
+			margin-left: 0;
+			margin-top: 50px;
+		}
+	}
+}

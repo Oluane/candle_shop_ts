@@ -1,0 +1,88 @@
+@import "../../style/generalVariables.scss";
+
+.formWrapper {
+	margin: auto;
+	max-width: 550px;
+	width: 100%;
+
+	.formContent {
+		background-color: $primary;
+		padding: 30px 45px;
+	}
+
+	.formHeader {
+		margin-bottom: 35px;
+	}
+
+	.formContainer {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 25px;
+	}
+
+	.inputLabel.checkboxInput {
+		display: flex;
+		align-items: center;
+		.customCheckbox {
+			width: 14px;
+			height: 14px;
+			position: relative;
+			bottom: -1px;
+			border: solid 1px $lightDark;
+			background-color: transparent;
+			cursor: pointer;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -1px;
+				left: -1px;
+				background-color: $roseGold;
+				width: 14px;
+				height: 14px;
+				opacity: 0;
+			}
+
+			&:checked::after {
+				opacity: 1;
+
+				.checkIcon {
+					width: 12px;
+					height: 12px;
+				}
+			}
+		}
+
+		.checkboxText {
+			line-height: 15px;
+			margin-left: 10px;
+		}
+
+		.checkIcon {
+			width: 12px;
+			height: 12px;
+			color: $primary;
+			position: absolute;
+			left: 5px;
+			top: 3px;
+			pointer-events: none;
+		}
+	}
+
+	.submitButton {
+		padding: 15px;
+		background-color: $lightDark;
+		border: solid 1px $lightDark;
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		& > span {
+			color: $primary;
+		}
+	}
+
+	.submitButton:hover {
+		background-color: $roseGold;
+		border-color: $roseGold;
+	}
+}

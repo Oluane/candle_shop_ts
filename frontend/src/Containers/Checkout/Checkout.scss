@@ -1,0 +1,99 @@
+@import "../../style/generalVariables.scss";
+
+.checkoutWrapper {
+	position: fixed;
+	top: 0;
+	z-index: 5;
+	background-color: $primary;
+
+	.checkoutHeader {
+		background-color: $primary;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		padding: 10px;
+		box-shadow: 0px 0px 10px 0px $tertiaryTrans;
+		z-index: 2;
+		min-height: 65px;
+
+		.brandLogo {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			img {
+				height: 100%;
+			}
+		}
+		.goBackLink {
+			display: flex;
+			align-items: center;
+		}
+		.arrowBackIcon {
+			width: 25px;
+			height: 25px;
+			margin-right: 15px;
+		}
+	}
+
+	.checkoutBreadCrumbs {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 65px;
+		background-color: $secondaryTrans;
+
+		ul {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+
+		.breadCrumb {
+			width: 30%;
+			padding: 30px 0px;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			&:not(:last-child) {
+				&:after {
+					content: "";
+					display: inline-block;
+					width: 1px;
+					height: 14px;
+					background-color: $lightGreyTrans;
+					position: absolute;
+					right: 0;
+				}
+			}
+
+			&.active {
+				background-color: $roseGold;
+				color: $primary;
+
+				.stepIndex {
+					background-color: $primary;
+					color: $roseGold;
+				}
+			}
+
+			.stepIndex {
+				background-color: $roseGold;
+				color: $secondary;
+				width: 22px;
+				height: 22px;
+				font-size: 13px;
+				font-weight: 600;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-right: 15px;
+			}
+		}
+	}
+}

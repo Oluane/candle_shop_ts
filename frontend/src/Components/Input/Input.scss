@@ -1,0 +1,45 @@
+@import "../../style/generalVariables.scss";
+
+.inputLabel {
+	position: relative;
+	margin-bottom: 15px;
+
+	.formInput {
+		width: 100%;
+		padding: 15px;
+		border-radius: 0;
+		border: solid 1px $lightGrey;
+	}
+
+	.inputPlaceholder {
+		color: $lightGrey;
+		position: absolute;
+		top: 19px;
+		left: 15px;
+		pointer-events: none;
+		transition: all 0.3s ease;
+	}
+}
+
+.inputLabel.midWidthInput {
+	width: 49%;
+}
+
+.inputLabel:focus-within,
+.inputLabel.filled,
+.inputLabel.specialDisplay {
+	.formInput {
+		padding: 20px 15px 10px 15px;
+	}
+
+	.inputPlaceholder {
+		font-size: 10px;
+		top: 4px;
+	}
+}
+
+.inputLabel:focus-within {
+	.formInput {
+		border-color: $roseGold;
+	}
+}

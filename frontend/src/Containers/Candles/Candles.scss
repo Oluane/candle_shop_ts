@@ -1,0 +1,26 @@
+@import "../../style/generalVariables.scss";
+
+.candlesHeader {
+	padding: 50px 0 30px 0;
+	h1 {
+		position: relative;
+		margin-bottom: 45px;
+	}
+
+	.titleSpan {
+		top: -15px;
+		left: 50%;
+	}
+
+	.pageDesc {
+	}
+}
+
+@media screen and (max-width: 688px) {
+	.candlesHeader {
+		.pageDesc {
+			padding: 0 15px;
+			line-height: 18px;
+		}
+	}
+}
