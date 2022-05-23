@@ -8,7 +8,7 @@ import SkeletonItem from "../../Components/SkeletonItem/SkeletonItem";
 import { viewportContext } from "../../Components/ViewportProvider/ViewportProvider";
 import apiInstance from "../../services/api/api";
 
-const ScentFamily = (props) => {
+const ScentFamily = (_props) => {
   const [currentFamily, setCurrentFamily] = useState(null);
   const [scents, setScents] = useState(null);
   const [isLoading, setIsLoading] = useState(true);

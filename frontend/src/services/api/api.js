@@ -36,7 +36,7 @@ apiInstance.interceptors.response.use((res) => {
   let newRes = { ...res };
 
   if (newRes.data.length !== undefined && newRes.data.length > 0) {
-    newRes.data = newRes.data.map((item, i) => {
+    newRes.data = newRes.data.map((item) => {
       if (typeof item === "object") {
         let data = {};
         Object.keys(item).map((e) => {

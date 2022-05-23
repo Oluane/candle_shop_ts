@@ -7,7 +7,7 @@ export default (state = initial, action) => {
     case addressesActions.ADDRESSES_SET.type:
       return action.payload[0] !== undefined ? [...action.payload] : [...state];
 
-    case addressesActions.ADDRESSES_EDIT_ONE.type:
+    case addressesActions.ADDRESSES_EDIT_ONE.type: {
       const prevAddressIdx = state.findIndex((address) => address.id === action.payload.id);
       const newStateToEdit = [...state];
       newStateToEdit[prevAddressIdx] = action.payload;
@@ -18,8 +18,9 @@ export default (state = initial, action) => {
         newStateToEdit[prevFavAddressIdx].isFavorite = 0;
       }
       return newStateToEdit;
+    }
 
-    case addressesActions.ADDRESSES_DELETE_ONE.type:
+    case addressesActions.ADDRESSES_DELETE_ONE.type: {
       let newStateAfterDelete = state.filter((address) => address.id !== action.payload.deletedAddressId);
 
       if (action.payload.nextFavAddressId) {
@@ -34,8 +35,9 @@ export default (state = initial, action) => {
       }
 
       return newStateAfterDelete;
+    }
 
-    case addressesActions.ADDRESSES_ADD_ONE.type:
+    case addressesActions.ADDRESSES_ADD_ONE.type: {
       let newState;
 
       if (state[0].id === -1 && state.length === 1) {
@@ -54,6 +56,7 @@ export default (state = initial, action) => {
       }
 
       return newState;
+    }
 
     case addressesActions.ADDRESSES_LOGOUT_INITIAL.type:
       return initial;

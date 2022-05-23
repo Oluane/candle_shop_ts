@@ -46,7 +46,7 @@ const MyWishlist = () => {
           },
         });
       })
-      .catch((err) =>
+      .catch(() =>
         dispatchToast({
           type: "ADD_TOAST",
           payload: {

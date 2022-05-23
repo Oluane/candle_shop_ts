@@ -52,7 +52,7 @@ const Account = () => {
                   key={"accountNavListItems" + i}
                   id={section.id}
                   className={"accountNavListItems lightDarkColor" + (displayedSectionIndex === i ? " active" : "")}
-                  onClick={(e) => setDisplayedSectionIndex(i)}
+                  onClick={() => setDisplayedSectionIndex(i)}
                 >
                   {section.name}
                 </li>

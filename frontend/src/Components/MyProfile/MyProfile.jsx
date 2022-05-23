@@ -46,7 +46,7 @@ const MyProfile = () => {
           },
         });
       })
-      .catch((err) =>
+      .catch(() =>
         dispatchToast({
           type: "ADD_TOAST",
           payload: {

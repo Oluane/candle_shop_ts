@@ -18,7 +18,7 @@ const CandleInfoDisplayer = ({ typeSize, scent }) => {
   return (
     <div className="candleInfoDisplayerWrapper">
       <nav className="candleInfoNav">
-        {sectionsToDisplay.map((section, i) => {
+        {sectionsToDisplay.map((section) => {
           return (
             <h4
               className={"navItem mediumBold" + (displayedSection === section.id ? " active" : "")}

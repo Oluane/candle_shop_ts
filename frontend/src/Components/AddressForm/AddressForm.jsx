@@ -172,7 +172,7 @@ const AddressForm = ({ addressObj = {} }) => {
                 name="isFavAddress"
                 checked={isFavorite ? true : false}
                 className="customCheckbox"
-                onChange={() => {}}
+                // onChange={() => {}}
               />
               <span className="checkIcon">
                 <IconSvg iconName="checkArrow" />

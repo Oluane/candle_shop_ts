@@ -42,9 +42,7 @@ const LoginForm = () => {
                 const addressesData = responses[1].data;
 
                 const { wishlistId, creationDatetime } = wishlistData[0];
-                const wishlistProducts = wishlistData.map(
-                  ({ wishlistId, creationDatetime, ...keepProperties }) => keepProperties,
-                );
+                const wishlistProducts = wishlistData.map(({ _creationDatetime, ...keepProperties }) => keepProperties);
 
                 dispatch({
                   ...wishlistActions.WISHLIST_SET,
